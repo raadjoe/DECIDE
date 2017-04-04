@@ -26,7 +26,6 @@ public class Decide
 		/////////////////////////////////////
 
 
-
 		ModelFunctions theModel = new ModelFunctions();
 		ViewFunctions theView = new ViewFunctions();
 		ControllerFunctions theController = new ControllerFunctions(theModel, theView);
