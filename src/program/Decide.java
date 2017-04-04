@@ -16,7 +16,7 @@ public class Decide
 	public static String IAO = "http://purl.obolibrary.org/obo/";
 	public static String skos = "http://www.w3.org/2004/02/skos/core#";
 	public static String echantillon_po2 = "data/Echantillon_PO2_CellExtraDry.rdf";
-	public static String exemple_jus = "data/exemple_jus.owl";
+
 
 	public static void main(String[] args) 
 	{	
@@ -30,49 +30,34 @@ public class Decide
 		ViewFunctions theView = new ViewFunctions();
 		ControllerFunctions theController = new ControllerFunctions(theModel, theView);
 
+		
+		// the classes that can be discarded from the algorithm
+		ArrayList<String> discardedClasses = new ArrayList<>();
+		discardedClasses.add(PO2+"observation");
+		
 		// this HashMap serves at discarding some unwanted properties in the lattice
 		// the first column indicates the class in which we want to discard the list of properties from the second column
 		// the string "all" indicates to remove a property from all identiConTo classes
-
-		ArrayList<String> discardedClasses = new ArrayList<>();
-		discardedClasses.add(PO2+"observation");
-		//discardedClasses.add(PO2+"step");
+			HashMap<String, ArrayList<String>> listOfDiscardedProperties = new HashMap<>();
+			/*ArrayList<String> discardedProps = new ArrayList<>();
+		discardedProps.add(skos+"altLabel");
+		discardedProps.add(skos+"prefLabel");
+		discardedProps.add(PO2+"databaseID");
+		listOfDiscardedProperties.put("all", discardedProps);*/
 		
-		HashMap<String, ArrayList<String>> discardedProperties = new HashMap<>();
-		ArrayList<String> discProps = new ArrayList<>();
-		discProps.add(skos+"altLabel");
-		discProps.add(skos+"prefLabel");
-		discProps.add(PO2+"databaseID");
-		discProps.add(PO2+"minSupport");
-		discProps.add(PO2+"minKernel");
-		discProps.add(PO2+"maxKernel");
-		discProps.add(PO2+"isSingularMeasureOf");
-		discardedProperties.put("all", discProps);
-	
-/*		ArrayList<ArrayList<String>> indispensableProps = new ArrayList<ArrayList<String>>();
-		
-		ArrayList<String> firstPairedProps = new ArrayList<>();
-		firstPairedProps.add(PO2+ "maxKernel");
-		firstPairedProps.add(PO2+ "minKernel");
-		firstPairedProps.add(PO2+ "maxSupport");
-		firstPairedProps.add(PO2+ "minSupport");
-		firstPairedProps.add(PO2+ "hasForUnitOfMeasure");
-		
-		ArrayList<String> secondPairedProps = new ArrayList<>();
-		secondPairedProps.add(PO2+ "hasForValue");
-		secondPairedProps.add(PO2+ "hasForMeasurementScale");		
-		
-		indispensableProps.add(firstPairedProps);
-		indispensableProps.add(secondPairedProps);*/
-
-
-		
-
+		ArrayList<ArrayList<String>> listOfCoupleProperties = new ArrayList<ArrayList<String>>();
+		/*ArrayList<String> firstCoupleProps = new ArrayList<>();
+		firstCoupleProps.add(PO2+ "hasForValue");
+		firstCoupleProps.add(PO2+ "hasForMeasurementScale");
+		ArrayList<String> secondCoupleProps = new ArrayList<>();
+		secondCoupleProps.add(PO2+ "hasValue");
+		secondCoupleProps.add(PO2+ "hasForUnitOfMeasure");	
+		listOfCoupleProperties.add(firstCoupleProps);
+		listOfCoupleProperties.add(secondCoupleProps);*/
 
 		String targetClass = PO2+"mixture";	
-		theController.decide(echantillon_po2, targetClass, discardedClasses, discardedProperties, null);
-		//String targetClass = "http://www.semanticweb.org/ontoJus#Jus";		
-		//theController.decide(exemple_jus, targetClass, null, null, null);
+		// the algorithm takes as input the dataset, the target class, the discarded classes, the discarded properties, and the 
+		theController.decide(echantillon_po2, targetClass, discardedClasses, listOfDiscardedProperties, listOfCoupleProperties, null);
 
 
 		////////////////TIME/////////////////

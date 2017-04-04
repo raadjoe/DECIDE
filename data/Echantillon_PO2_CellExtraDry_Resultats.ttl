@@ -300,15 +300,15 @@ agrovoc:c_24883  a       owl:Class ;
 :cellextradry_process_13_step_57_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_57_mixture_15_attribute_quality11302 , :cellextradry_process_13_step_57_mixture_15_attribute_quality11675 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
                 :cellextradry_process_13_step_46_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
                 :cellextradry_process_13_step_46_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_42_mixture_13 ;
+        :identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
+        :identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_57_product_21 , :cellextradry_process_13_step_57_product_20 .
 
 agrovoc:c_2679  a        owl:Class ;
@@ -385,6 +385,10 @@ agrovoc:c_37442  a       owl:Class ;
         rdfs:label       "proviruses"@en , "Provirus"@fr ;
         rdfs:subClassOf  agrovoc:c_8262 .
 
+:identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_ .
+
 agrovoc:c_32613  a       owl:Class ;
         rdfs:label       "transporting quality"@en , "Aptitude au transport"@fr ;
         rdfs:subClassOf  agrovoc:c_2572 .
@@ -448,12 +452,12 @@ agrovoc:c_5473  a        owl:Class ;
 
 :cellextradry_process_13_step_41_mixture_13
         a                             :mixture , owl:NamedIndividual ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_
                 :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_40_mixture_13 ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
-                :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_38_mixture_12 ;
-        :identiConTo_gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
-                :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_38_mixture_12 ;
+        :identiConTo_gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
+                :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 ;
+        :identiConTo_gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
+                :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_49_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_52_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_58_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_41_product_18 , :cellextradry_process_13_step_41_product_15 , :cellextradry_process_13_step_41_product_14 , :cellextradry_process_13_step_41_product_16 , :cellextradry_process_13_step_41_product_13 .
 
@@ -507,6 +511,40 @@ agrovoc:c_35357  a       owl:Class ;
         rdfs:label       "locust bean gum"@en , "gomme de caroube"@fr ;
         rdfs:subClassOf  agrovoc:c_3441 .
 
+:gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :eaux
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :mixture ;
+                           :isComposedOf     :something
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
+                           :hasForType              :quality_nature_de_l_echantillon
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :naoh__0_1m_
+                         ] ;
+        obo:IAO_0000115  [ :databaseID  :something ;
+                           :hasForType  agrovoc:c_8288 ;
+                           :hasValue    "something"
+                         ] .
+
 agrovoc:c_34073  a       owl:Class ;
         rdfs:label       "phosphine"@en , "Phosphine"@fr ;
         rdfs:subClassOf  agrovoc:c_24430 .
@@ -535,15 +573,15 @@ agrovoc:c_36121  a       owl:Class ;
 :cellextradry_process_13_step_59_mixture_15
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_59_mixture_15_attribute_quality11302 , :cellextradry_process_13_step_59_mixture_15_attribute_quality11675 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
                 :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_48_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_48_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_53_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_44_mixture_14 ;
+        :identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_59_product_20 , :cellextradry_process_13_step_59_product_21 .
 
 :cellextradry_process_13_step_43_product_14
@@ -973,11 +1011,11 @@ agrovoc:c_8708  a        owl:Class ;
 :cellextradry_process_13_step_52_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_52_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_52_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
-        :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_42_mixture_13 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_58_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_42_mixture_13 ;
         :isComposedOf                 :cellextradry_process_13_step_52_product_21 , :cellextradry_process_13_step_52_product_20 .
 
 agrovoc:c_22561  a       owl:Class ;
@@ -1274,10 +1312,6 @@ agrovoc:c_3666  a        owl:Class ;
         rdfs:label       "horse gram"@en , "Haricot de kulthi"@fr ;
         rdfs:subClassOf  agrovoc:c_8174 .
 
-:identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_ .
-
 agrovoc:c_6808  a        owl:Class ;
         rdfs:label       "sarcosine"@en , "Sarcosine"@fr ;
         rdfs:subClassOf  agrovoc:c_342 .
@@ -1427,6 +1461,50 @@ agrovoc:c_34866  a       owl:Class ;
 agrovoc:c_34486  a       owl:Class ;
         rdfs:label       "Brucella ovis"@fr , "Brucella ovis"@en ;
         rdfs:subClassOf  agrovoc:c_1120 .
+
+:gc_mixture_2.4_2.2_2.4_2.2_3.7_3.28_2.2_4.8_2.2_2.2_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :kh2po4
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_8309
+                         ] ;
+        obo:IAO_0000115  [ :databaseID              :something ;
+                           :hasForMeasurementScale  :something ;
+                           :hasForType              :quality_nature_de_l_echantillon ;
+                           :hasForValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_3287
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_2084
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_36892
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :mixture ;
+                           :isComposedOf     :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_28561
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] .
 
 agrovoc:c_35630  a       owl:Class ;
         rdfs:label       "Polydnavirus"@fr , "Polydnavirus"@en ;
@@ -3359,10 +3437,6 @@ agrovoc:c_11805  a       owl:Class ;
         rdfs:label       "intelligence"@en , "Intelligence"@fr ;
         rdfs:subClassOf  agrovoc:c_4740 .
 
-:identiConTo_gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_ .
-
 :Cubic_Centimeter_By_Milliinch_By_Reciprocal_Square_Meter
         a                 core:Unit_Division_Or_Multiplication , owl:NamedIndividual ;
         core:hasOperand1  :Cubic_Centimeter_By_Milliinch ;
@@ -3859,11 +3933,11 @@ agrovoc:c_34880  a       owl:Class ;
 :cellextradry_process_13_step_46_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_46_mixture_15_attribute_quality11302 , :cellextradry_process_13_step_46_mixture_15_attribute_quality11675 ;
-        :identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_42_mixture_13 ;
+        :identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_46_product_21 , :cellextradry_process_13_step_46_product_20 .
 
 agrovoc:c_26181  a       owl:Class ;
@@ -5431,10 +5505,6 @@ agrovoc:c_27451  a       owl:Class ;
         rdfs:label       "antimutagens"@en , "Antimutagène"@fr ;
         rdfs:subClassOf  agrovoc:c_49873 .
 
-:identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.6_3.15_2.2_4.8_2.2_2.2_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.4_2.2_2.4_2.2_3.6_3.15_2.2_4.8_2.2_2.2_2.2_ .
-
 agrovoc:c_3199  a        owl:Class ;
         rdfs:label       "gastrointestinal agents"@en , "Médicament gastro-intestinal"@fr ;
         rdfs:subClassOf  agrovoc:c_2395 .
@@ -5545,7 +5615,7 @@ agrovoc:c_16802  a       owl:Class ;
 :cellextradry_process_13_step_43_mixture_14
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_43_mixture_14_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.6_3.15_2.2_4.8_2.2_2.2_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.7_3.28_2.2_4.8_2.2_2.2_2.2_
                 :cellextradry_process_13_step_44_mixture_14 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_43_product_15 , :cellextradry_process_13_step_43_product_18 , :cellextradry_process_13_step_43_product_14 , :cellextradry_process_13_step_43_product_13 , :cellextradry_process_13_step_43_product_19 , :cellextradry_process_13_step_43_product_16 .
@@ -5833,10 +5903,6 @@ agrovoc:c_3157  a        owl:Class ;
 agrovoc:c_35678  a       owl:Class ;
         rdfs:label       "cottonseed meal"@en , "Tourteau de coton"@fr ;
         rdfs:subClassOf  agrovoc:c_5336 .
-
-:identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_ .
 
 agrovoc:c_5205  a        owl:Class ;
         rdfs:label       "noise"@en , "Bruit"@fr ;
@@ -6339,6 +6405,10 @@ agrovoc:c_8649  a        owl:Class ;
         rdfs:label       "Virus peste porcine africaine"@fr , "African swine fever virus"@en ;
         rdfs:subClassOf  agrovoc:c_3946 .
 
+:identiConTo_gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_ .
+
 agrovoc:c_15746  a       owl:Class ;
         rdfs:label       "freeze dried products"@en , "Produit lyophilisé"@fr ;
         rdfs:subClassOf  agrovoc:c_15740 .
@@ -6837,9 +6907,9 @@ agrovoc:c_33504  a       owl:Class ;
 :cellextradry_process_13_step_54_mixture_15
         a                 :mixture , owl:NamedIndividual ;
         :hasForAttribute  :cellextradry_process_13_step_54_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_54_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
                 :cellextradry_process_13_step_55_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
                 :cellextradry_process_13_step_55_mixture_15 ;
         :isComposedOf     :cellextradry_process_13_step_54_product_21 , :cellextradry_process_13_step_54_product_20 .
 
@@ -7051,10 +7121,10 @@ agrovoc:c_31261  a       owl:Class ;
 :cellextradry_process_13_step_56_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_56_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_56_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_45_mixture_14 ;
         :isComposedOf                 :cellextradry_process_13_step_56_product_21 , :cellextradry_process_13_step_56_product_20 .
 
@@ -7185,12 +7255,12 @@ agrovoc:c_13520  a       owl:Class ;
 
 :cellextradry_process_13_step_40_mixture_13
         a                             :mixture , owl:NamedIndividual ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_
                 :cellextradry_process_13_step_42_mixture_13 ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
-                :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_38_mixture_12 ;
-        :identiConTo_gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
                 :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 ;
+        :identiConTo_gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
+                :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_38_mixture_12 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_43_mixture_14 ;
         :isComposedOf                 :cellextradry_process_13_step_40_product_15 , :cellextradry_process_13_step_40_product_14 , :cellextradry_process_13_step_40_product_16 , :cellextradry_process_13_step_40_product_13 , :cellextradry_process_13_step_40_product_18 .
 
@@ -7334,16 +7404,16 @@ agrovoc:c_3333  a        owl:Class ;
         rdfs:label       "gooseberries"@en , "Groseille à maquereau"@fr ;
         rdfs:subClassOf  agrovoc:c_7151 .
 
+agrovoc:c_16163  a       owl:Class ;
+        rdfs:label       "anions"@en , "Anion"@fr ;
+        rdfs:subClassOf  agrovoc:c_16162 .
+
 :Gram_By_Reciprocal_Gram
         a                 core:Unit_Division_Or_Multiplication , owl:NamedIndividual ;
         core:hasOperand1  :Gram ;
         core:hasOperand2  :Reciprocal_Gram ;
         core:hasType      "Multiplication" ;
         skos:prefLabel    "Gramme fois gramme-1"@fr , "Gram by reciprocal gram"@en .
-
-agrovoc:c_16163  a       owl:Class ;
-        rdfs:label       "anions"@en , "Anion"@fr ;
-        rdfs:subClassOf  agrovoc:c_16162 .
 
 agrovoc:c_36758  a       owl:Class ;
         rdfs:label       "transforming growth factor"@en , "Facteur de croissance transformant"@fr ;
@@ -7383,6 +7453,42 @@ agrovoc:c_157  a         owl:Class ;
 agrovoc:c_331556  a      owl:Class ;
         rdfs:label       "host plant resistance"@en ;
         rdfs:subClassOf  agrovoc:c_1501 .
+
+:gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :mixture ;
+                           :isComposedOf     :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :naoh__0_1m_
+                         ] ;
+        obo:IAO_0000115  [ :databaseID              :something ;
+                           :hasForMeasurementScale  :something ;
+                           :hasForType              :quality_nature_de_l_echantillon ;
+                           :hasForValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :eaux
+                         ] ;
+        obo:IAO_0000115  [ :databaseID  :something ;
+                           :hasForType  agrovoc:c_8288 ;
+                           :hasValue    "something"
+                         ] .
 
 agrovoc:c_5743  a        owl:Class ;
         rdfs:label       "pet foods"@en , "Aliment pour animaux de compagnie"@fr ;
@@ -8433,6 +8539,40 @@ agrovoc:c_20686  a       owl:Class ;
         rdfs:label       "Rotavirus bovin"@fr , "Bovine rotavirus"@en ;
         rdfs:subClassOf  agrovoc:c_6664 .
 
+:gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :naoh__0_1m_
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :eaux
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label         :something ;
+                           :hasForType        om:singular_unit ;
+                           core:hasDimension  :something ;
+                           skos:altLabel      :something ;
+                           skos:prefLabel     :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
+                           :hasForType              :quality_nature_de_l_echantillon
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :mixture ;
+                           :isComposedOf     :something
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_8288 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] .
+
 :cellextradry_method_30_attribute_quality11354
         a                        :quality_absorptivite_molaire , owl:NamedIndividual ;
         :databaseID              "11354" ;
@@ -8500,10 +8640,6 @@ agrovoc:c_1354098656894
         a                owl:Class ;
         rdfs:label       "ribosomal DNA"@en , "ADN ribosomal"@fr ;
         rdfs:subClassOf  agrovoc:c_2347 .
-
-:identiConTo_gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_ .
 
 agrovoc:c_24022  a       owl:Class ;
         rdfs:label       "electrical conductivity"@en , "Conductivité électrique"@fr ;
@@ -9753,6 +9889,42 @@ agrovoc:c_33463  a       owl:Class ;
         rdfs:label       "∆Abs" , "abs" ;
         rdfs:subClassOf  :undefinedAttribute .
 
+:gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :databaseID              :something ;
+                           :hasForMeasurementScale  :something ;
+                           :hasForType              :quality_nature_de_l_echantillon ;
+                           :hasForValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :naoh__0_1m_
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_8288 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :eaux
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :mixture ;
+                           :isComposedOf     :something
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label         :something ;
+                           :hasForType        om:singular_unit ;
+                           core:hasDimension  :something ;
+                           skos:altLabel      :something ;
+                           skos:prefLabel     :something
+                         ] .
+
 agrovoc:c_36415  a       owl:Class ;
         rdfs:label       "curcumin"@en , "Curcumine"@fr ;
         rdfs:subClassOf  agrovoc:c_2425 .
@@ -9981,15 +10153,15 @@ agrovoc:c_2963  a        owl:Class ;
 :cellextradry_process_13_step_48_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_48_mixture_15_attribute_quality11302 , :cellextradry_process_13_step_48_mixture_15_attribute_quality11675 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
                 :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
                 :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_42_mixture_13 ;
+        :identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_48_product_20 , :cellextradry_process_13_step_48_product_21 .
 
 :cellextradry_method_33_attribute_quality11354
@@ -10375,36 +10547,6 @@ agrovoc:c_3065  a        owl:Class ;
         rdfs:label       "formic acid"@en , "Acide formique"@fr ;
         rdfs:subClassOf  agrovoc:c_2818 .
 
-:gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
-                           :hasForType              :quality_nature_de_l_echantillon
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :mixture ;
-                           :isComposedOf     :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :eaux
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  agrovoc:c_8288 ;
-                           :hasValue    "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :naoh__0_1m_
-                         ] .
-
 agrovoc:c_34492  a       owl:Class ;
         rdfs:label       "Leuconostoc mesenteroides"@fr , "Leuconostoc mesenteroides"@en ;
         rdfs:subClassOf  agrovoc:c_12154 .
@@ -10477,6 +10619,38 @@ agrovoc:c_29487  a       owl:Class ;
 agrovoc:c_5475  a        owl:Class ;
         rdfs:label       "oximes"@en , "Oxime"@fr ;
         rdfs:subClassOf  agrovoc:c_5389 .
+
+:gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForType    :mixture ;
+                           :isComposedOf  :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_36892
+                         ] ;
+        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_8309
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_2084
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_3287
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :kh2po4
+                         ] .
 
 agrovoc:c_6379  a        owl:Class ;
         rdfs:label       "purines"@en , "Purine"@fr ;
@@ -10719,37 +10893,6 @@ agrovoc:c_32040  a       owl:Class ;
         core:hasType      "Multiplication" ;
         skos:altLabel     "mg/kg"@fr , "mg/kg"@en ;
         skos:prefLabel    "Milligram by Reciprocal Kilogram"@en , "Milligramme fois Kilogramme-1"@fr .
-
-:gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :naoh__0_1m_
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
-                           :hasForType              :quality_nature_de_l_echantillon ;
-                           :hasForValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :mixture ;
-                           :isComposedOf     :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :eaux
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  agrovoc:c_8288 ;
-                           :hasValue    "something"
-                         ] .
 
 agrovoc:c_2639  a        owl:Class ;
         rdfs:label       "ergosterol"@en , "Ergostérol"@fr ;
@@ -11271,37 +11414,6 @@ agrovoc:c_9609  a        owl:Class ;
         rdfs:label       "carbadox"@en , "Carbadox"@fr ;
         rdfs:subClassOf  agrovoc:c_3398 .
 
-:gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForType    :mixture ;
-                           :isComposedOf  :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_36892
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :kh2po4
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_2084
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_3287
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_8309
-                         ] .
-
 agrovoc:c_24556  a       owl:Class ;
         rdfs:label       "neurotoxins"@en , "Neurotoxine"@fr ;
         rdfs:subClassOf  agrovoc:c_7828 .
@@ -11631,8 +11743,8 @@ agrovoc:c_33547  a       owl:Class ;
 :cellextradry_process_13_step_45_mixture_14
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_45_mixture_14_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.6_3.15_2.2_4.8_2.2_2.2_2.2_
-                :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_44_mixture_14 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.7_3.28_2.2_4.8_2.2_2.2_2.2_
+                :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_43_mixture_14 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_45_product_19 , :cellextradry_process_13_step_45_product_16 , :cellextradry_process_13_step_45_product_15 , :cellextradry_process_13_step_45_product_18 , :cellextradry_process_13_step_45_product_14 , :cellextradry_process_13_step_45_product_13 .
 
@@ -12399,13 +12511,13 @@ agrovoc:c_8163  a        owl:Class ;
         rdfs:label       "veal"@en , "Viande de veau"@fr ;
         rdfs:subClassOf  agrovoc:c_4669 .
 
-agrovoc:c_4238  a        owl:Class ;
-        rdfs:label       "leaf mould"@en , "Terreau de feuilles"@fr ;
-        rdfs:subClassOf  agrovoc:c_3693 .
-
 agrovoc:c_16164  a       owl:Class ;
         rdfs:label       "bilirubin"@en , "Bilirubine"@fr ;
         rdfs:subClassOf  agrovoc:c_5875 .
+
+agrovoc:c_4238  a        owl:Class ;
+        rdfs:label       "leaf mould"@en , "Terreau de feuilles"@fr ;
+        rdfs:subClassOf  agrovoc:c_3693 .
 
 agrovoc:c_36759  a       owl:Class ;
         rdfs:label       "hydrocortisone"@en , "Hydrocortisone"@fr ;
@@ -12910,6 +13022,10 @@ agrovoc:c_8636  a        owl:Class ;
         rdfs:label   "has row value"@en ;
         rdfs:range   xsd:integer .
 
+:identiConTo_gc_mixture_2.4_2.2_2.4_2.2_3.7_3.28_2.2_4.8_2.2_2.2_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.4_2.2_2.4_2.2_3.7_3.28_2.2_4.8_2.2_2.2_2.2_ .
+
 :hasForSubstep  a           owl:ObjectProperty ;
         rdfs:domain         :step ;
         rdfs:label          "has for substep"@en ;
@@ -13054,10 +13170,10 @@ agrovoc:c_6221  a        owl:Class ;
 :cellextradry_process_13_step_58_mixture_15
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_58_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_58_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_57_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_45_mixture_14 ;
         :isComposedOf                 :cellextradry_process_13_step_58_product_20 , :cellextradry_process_13_step_58_product_21 .
 
@@ -13188,9 +13304,9 @@ agrovoc:c_35373  a       owl:Class ;
 
 :cellextradry_process_13_step_42_mixture_13
         a                             :mixture , owl:NamedIndividual ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
+        :identiConTo_gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
                 :cellextradry_process_13_step_39_mixture_12 ;
-        :identiConTo_gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
                 :cellextradry_process_13_step_39_mixture_12 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_43_mixture_14 ;
         :isComposedOf                 :cellextradry_process_13_step_42_product_13 , :cellextradry_process_13_step_42_product_18 , :cellextradry_process_13_step_42_product_16 , :cellextradry_process_13_step_42_product_15 , :cellextradry_process_13_step_42_product_14 .
@@ -13446,10 +13562,10 @@ agrovoc:c_16020  a       owl:Class ;
 :cellextradry_process_13_step_51_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_51_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_51_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_55_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_42_mixture_13 ;
         :isComposedOf                 :cellextradry_process_13_step_51_product_20 , :cellextradry_process_13_step_51_product_21 .
 
@@ -13663,10 +13779,10 @@ agrovoc:c_29005  a       owl:Class ;
 :cellextradry_process_13_step_53_mixture_15
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_53_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_53_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_44_mixture_14 ;
         :isComposedOf                 :cellextradry_process_13_step_53_product_20 , :cellextradry_process_13_step_53_product_21 .
 
@@ -13770,6 +13886,31 @@ agrovoc:c_8117  a        owl:Class ;
 agrovoc:c_15214  a       owl:Class ;
         rdfs:label       "virginiamycin"@en , "Virginiamycine"@fr ;
         rdfs:subClassOf  agrovoc:c_492 .
+
+:gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForType    :mixture ;
+                           :isComposedOf  :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  :kh2po4 ] ;
+        obo:IAO_0000115  [ :hasForType  agrovoc:c_36892 ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_2084
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  agrovoc:c_3287 ] ;
+        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForType  agrovoc:c_8309 ] .
 
 :observation  a          owl:Class ;
         rdfs:label       "observation"@en ;
@@ -14972,36 +15113,6 @@ agrovoc:c_35077  a       owl:Class ;
         rdfs:label       "lambda-cyhalothrin"@en , "Lambda-cyhalothrine"@fr ;
         rdfs:subClassOf  agrovoc:c_35076 .
 
-:gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :eaux
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label         :something ;
-                           :hasForType        om:singular_unit ;
-                           core:hasDimension  :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :mixture ;
-                           :isComposedOf     :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
-                           :hasForType              :quality_nature_de_l_echantillon
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_8288 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :naoh__0_1m_
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :measurement_scale ] .
-
 agrovoc:c_36221  a       owl:Class ;
         rdfs:label       "Zucchini yellow mosaic potyvirus"@en , "Potyvirus mosaïque jaune courgette"@fr ;
         rdfs:subClassOf  agrovoc:c_5985 , agrovoc:c_32866 .
@@ -15211,6 +15322,10 @@ agrovoc:c_9000002  a     owl:Class ;
         rdfs:label       "adolescent fertility"@en , "Fécondité des adolescents"@fr ;
         rdfs:subClassOf  agrovoc:c_2862 .
 
+:identiConTo_gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_ .
+
 :cellextradry_method_31_attribute_quality11356
         a                        :quality_volume_d_echantillon , owl:NamedIndividual ;
         :databaseID              "11356" ;
@@ -15284,37 +15399,6 @@ agrovoc:c_32843  a       owl:Class ;
 :cellextradry_process_13_step_39_product_14
         a                 agrovoc:c_36892 , owl:NamedIndividual ;
         :hasForAttribute  :cellextradry_process_13_step_39_attribute_quality47 .
-
-:gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_8288 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :naoh__0_1m_
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :eaux
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :mixture ;
-                           :isComposedOf     :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label         :something ;
-                           :hasForType        om:singular_unit ;
-                           core:hasDimension  :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
-                           :hasForType              :quality_nature_de_l_echantillon ;
-                           :hasForValue             "something"
-                         ] .
 
 agrovoc:c_33747  a       owl:Class ;
         rdfs:label       "Lactobacillus bulgaricus"@fr , "Lactobacillus bulgaricus"@en ;
@@ -16100,10 +16184,6 @@ agrovoc:c_36027  a       owl:Class ;
         rdfs:label       "Coxiella burnetii"@fr , "Coxiella burnetii"@en ;
         rdfs:subClassOf  agrovoc:c_1940 .
 
-agrovoc:c_26832  a       owl:Class ;
-        rdfs:label       "vapour pressure"@en , "Pression de vapeur"@fr ;
-        rdfs:subClassOf  agrovoc:c_6174 .
-
 agrovoc:c_27926  a       owl:Class ;
         rdfs:label       "basal rations"@en , "Ration de base"@fr ;
         rdfs:subClassOf  agrovoc:c_6461 .
@@ -16119,6 +16199,10 @@ agrovoc:c_3914  a        owl:Class ;
 agrovoc:c_9647  a        owl:Class ;
         rdfs:label       "cashews"@en , "Noix de cajou"@fr ;
         rdfs:subClassOf  agrovoc:c_12873 .
+
+agrovoc:c_26832  a       owl:Class ;
+        rdfs:label       "vapour pressure"@en , "Pression de vapeur"@fr ;
+        rdfs:subClassOf  agrovoc:c_6174 .
 
 agrovoc:c_4818  a        owl:Class ;
         rdfs:label       "middlings"@en , "Remoulages"@fr ;
@@ -16380,6 +16464,10 @@ agrovoc:c_24000  a       owl:Class ;
 agrovoc:c_353  a         owl:Class ;
         rdfs:label       "ammonium phosphate"@en , "Phosphate d'ammonium"@fr ;
         rdfs:subClassOf  agrovoc:c_5801 , agrovoc:c_351 .
+
+:identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_ .
 
 agrovoc:c_9000030  a     owl:Class ;
         rdfs:label       "dependency ratio"@en , "Ratio de dépendance"@fr ;
@@ -17155,11 +17243,11 @@ agrovoc:c_8169  a        owl:Class ;
 
 :cellextradry_process_13_step_38_mixture_12
         a                             owl:NamedIndividual , :mixture ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_
                 :cellextradry_process_13_step_39_mixture_12 ;
-        :identiConTo_gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
+        :identiConTo_gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
                 :cellextradry_process_13_step_42_mixture_13 ;
-        :identiConTo_gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
+        :identiConTo_gc_mixture_2.2_3.5_5.14_3.28_2.2_4.8_2.2_2.2_
                 :cellextradry_process_13_step_42_mixture_13 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_54_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_38_product_14 , :cellextradry_process_13_step_38_product_13 , :cellextradry_process_13_step_38_product_16 , :cellextradry_process_13_step_38_product_15 , :cellextradry_process_13_step_38_product_17 .
@@ -17568,6 +17656,10 @@ agrovoc:c_2186  a        owl:Class ;
         rdfs:label       "density"@en , "Densité"@fr ;
         rdfs:subClassOf  agrovoc:c_330493 , agrovoc:c_1521 .
 
+:identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_ .
+
 agrovoc:c_36755  a       owl:Class ;
         rdfs:label       "phosphatidic acids"@en , "Acide phosphatidique"@fr ;
         rdfs:subClassOf  agrovoc:c_36753 .
@@ -17883,29 +17975,6 @@ agrovoc:c_28204  a       owl:Class ;
 agrovoc:c_27110  a       owl:Class ;
         rdfs:label       "Actinobacillus pleuropneumoniae"@fr , "Actinobacillus pleuropneumoniae"@en ;
         rdfs:subClassOf  agrovoc:c_110 .
-
-:gc_mixture_2.2_3.5_3.6_3.15_3.3_5.5_3.3_3.3_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :kh2po4 ] ;
-        obo:IAO_0000115  [ :hasForType  agrovoc:c_8309 ] ;
-        obo:IAO_0000115  [ :hasForType  agrovoc:c_3287 ] ;
-        obo:IAO_0000115  [ :hasForType  agrovoc:c_36892 ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_2084
-                         ] ;
-        obo:IAO_0000115  [ :hasForType    :mixture ;
-                           :isComposedOf  :something
-                         ] .
 
 agrovoc:c_34095  a       owl:Class ;
         rdfs:label       "Rumen bacteria"@en , "Bactérie du rumen"@fr ;
@@ -18463,6 +18532,10 @@ agrovoc:c_947  a         owl:Class ;
         rdfs:label       "blackberries"@en , "Mûre de ronce"@fr ;
         rdfs:subClassOf  agrovoc:c_7151 .
 
+:identiConTo_gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_2.2_3.5_4.14_3.28_3.3_5.5_3.3_3.3_ .
+
 agrovoc:c_29233  a       owl:Class ;
         rdfs:label       "Pathogenic fungi"@en , "Champignon pathogène"@fr ;
         rdfs:subClassOf  agrovoc:c_5630 .
@@ -18587,35 +18660,9 @@ agrovoc:c_34753  a       owl:Class ;
         rdfs:label       "Rotavirus porcine"@fr , "Porcine rotavirus"@en ;
         rdfs:subClassOf  agrovoc:c_6664 .
 
-:gc_mixture_2.2_3.5_4.9_3.15_2.2_4.8_2.2_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_8309
-                         ] ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForType    :mixture ;
-                           :isComposedOf  :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_36892
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :kh2po4
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_3287
-                         ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_2084
-                         ] .
+:identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+        a                owl:ObjectProperty ;
+        obo:IAO_0000115  :gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_ .
 
 agrovoc:c_35657  a       owl:Class ;
         rdfs:label       "soil organic matter"@en , "Matière organique du sol"@fr ;
@@ -19200,46 +19247,6 @@ agrovoc:c_6403  a        owl:Class ;
 agrovoc:c_5069  a        owl:Class ;
         rdfs:label       "naphthenic acid"@en , "Acide naphténique"@fr ;
         rdfs:subClassOf  agrovoc:c_726 .
-
-:gc_mixture_2.4_2.2_2.4_2.2_3.6_3.15_2.2_4.8_2.2_2.2_2.2_
-        a                owl:Class ;
-        rdfs:subClassOf  obo:BFO_0000034 ;
-        obo:IAO_0000115  [ :hasForType           agrovoc:c_4639 ;
-                           :hasForUnitOfMeasure  :something ;
-                           :hasValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :kh2po4
-                         ] ;
-        obo:IAO_0000115  [ :hasForMeasurementScale  :something ;
-                           :hasForType              :quality_nature_de_l_echantillon ;
-                           :hasForValue             "something"
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_8309
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_3287
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_2084
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_36892
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       :mixture ;
-                           :isComposedOf     :something
-                         ] ;
-        obo:IAO_0000115  [ :hasForAttribute  :something ;
-                           :hasForType       agrovoc:c_28561
-                         ] ;
-        obo:IAO_0000115  [ :hasForType  :measurement_scale ] ;
-        obo:IAO_0000115  [ rdfs:label          :something ;
-                           :hasForType         om:singular_unit ;
-                           core:hasConversion  :something ;
-                           core:hasDimension   :something
-                         ] .
 
 agrovoc:c_7117  a        owl:Class ;
         rdfs:label       "smokes"@en , "Fumée"@fr ;
@@ -20191,15 +20198,15 @@ agrovoc:c_33748  a       owl:Class ;
 :cellextradry_process_13_step_50_mixture_15
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_50_mixture_15_attribute_quality11302 , :cellextradry_process_13_step_50_mixture_15_attribute_quality11675 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
                 :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_58_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_47_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_48_mixture_15 ;
-        :identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_58_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_44_mixture_14 ;
+        :identiConTo_gc_mixture_4.6_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
+        :identiConTo_gc_mixture_4.6_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
         :isComposedOf                 :cellextradry_process_13_step_50_product_21 , :cellextradry_process_13_step_50_product_20 .
 
 agrovoc:c_7010  a        owl:Class ;
@@ -20441,10 +20448,6 @@ agrovoc:c_10830  a       owl:Class ;
         core:hasType      "Division" ;
         skos:altLabel     "amol/m/s"@fr , "amol/m/s"@en ;
         skos:prefLabel    "Attomole per meter per second"@en , "Attomole par mètre par seconde"@fr .
-
-:identiConTo_gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_3.3_2.2_3.4_2.4_2.2_3.6_3.15_2.2_ .
 
 :cellextradry_material_84_attribute_quality7751
         a                        :quality_type_de_capteur , owl:NamedIndividual ;
@@ -21280,10 +21283,6 @@ agrovoc:c_29210  a       owl:Class ;
         rdfs:label       "coconut milk"@en , "Lait de coco"@fr ;
         rdfs:subClassOf  agrovoc:c_5267 .
 
-:identiConTo_gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_2.2_3.5_3.6_3.15_2.2_4.8_2.2_2.2_ .
-
 agrovoc:c_7006  a        owl:Class ;
         rdfs:label       "seville oranges"@en , "Bigarade"@fr ;
         rdfs:subClassOf  agrovoc:c_1641 .
@@ -21407,6 +21406,40 @@ agrovoc:c_36538  a       owl:Class ;
 agrovoc:c_35444  a       owl:Class ;
         rdfs:label       "Campylobacter hyointestinalis"@fr , "Campylobacter hyointestinalis"@en ;
         rdfs:subClassOf  agrovoc:c_1235 .
+
+:gc_mixture_2.2_3.5_3.7_3.28_2.2_4.8_2.2_2.2_
+        a                owl:Class ;
+        rdfs:subClassOf  obo:BFO_0000034 ;
+        obo:IAO_0000115  [ :hasForType    :mixture ;
+                           :isComposedOf  :something
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       :kh2po4
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_3287
+                         ] ;
+        obo:IAO_0000115  [ :databaseID           :something ;
+                           :hasForType           agrovoc:c_4639 ;
+                           :hasForUnitOfMeasure  :something ;
+                           :hasValue             "something"
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_8309
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_2084
+                         ] ;
+        obo:IAO_0000115  [ :hasForAttribute  :something ;
+                           :hasForType       agrovoc:c_36892
+                         ] ;
+        obo:IAO_0000115  [ rdfs:label          :something ;
+                           :hasForType         om:singular_unit ;
+                           core:hasConversion  :something ;
+                           core:hasDimension   :something ;
+                           skos:altLabel       :something ;
+                           skos:prefLabel      :something
+                         ] .
 
 agrovoc:c_34350  a       owl:Class ;
         rdfs:label       "thidiazuron"@en , "Thidiazuron"@fr ;
@@ -22322,10 +22355,10 @@ agrovoc:c_32868  a       owl:Class ;
 :cellextradry_process_13_step_47_mixture_15
         a                             owl:NamedIndividual , :mixture ;
         :hasForAttribute              :cellextradry_process_13_step_47_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_47_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_54_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_46_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_48_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_39_mixture_12 , :cellextradry_process_13_step_42_mixture_13 ;
         :isComposedOf                 :cellextradry_process_13_step_47_product_21 , :cellextradry_process_13_step_47_product_20 .
 
@@ -22501,10 +22534,10 @@ agrovoc:c_32863  a       owl:Class ;
 :cellextradry_process_13_step_49_mixture_15
         a                             :mixture , owl:NamedIndividual ;
         :hasForAttribute              :cellextradry_process_13_step_49_mixture_15_attribute_quality11675 , :cellextradry_process_13_step_49_mixture_15_attribute_quality11302 ;
-        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-                :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_52_mixture_15 ;
-        :identiConTo_gc_mixture_2.4_2.2_3.4_2.4_2.2_3.6_3.15_2.2_
-                :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_52_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_57_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_2.2_2.4_2.2_3.7_4.56_2.2_
+                :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_52_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_51_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_56_mixture_15 ;
+        :identiConTo_gc_mixture_2.4_2.2_3.5_2.4_2.2_3.7_3.28_2.2_
+                :cellextradry_process_13_step_59_mixture_15 , :cellextradry_process_13_step_46_mixture_15 , :cellextradry_process_13_step_47_mixture_15 , :cellextradry_process_13_step_55_mixture_15 , :cellextradry_process_13_step_54_mixture_15 , :cellextradry_process_13_step_57_mixture_15 , :cellextradry_process_13_step_56_mixture_15 , :cellextradry_process_13_step_53_mixture_15 , :cellextradry_process_13_step_50_mixture_15 , :cellextradry_process_13_step_58_mixture_15 , :cellextradry_process_13_step_52_mixture_15 , :cellextradry_process_13_step_48_mixture_15 , :cellextradry_process_13_step_51_mixture_15 ;
         :identiConTo_gc_mixture_4.4_  :cellextradry_process_13_step_43_mixture_14 , :cellextradry_process_13_step_40_mixture_13 , :cellextradry_process_13_step_44_mixture_14 , :cellextradry_process_13_step_45_mixture_14 , :cellextradry_process_13_step_42_mixture_13 , :cellextradry_process_13_step_38_mixture_12 , :cellextradry_process_13_step_39_mixture_12 ;
         :isComposedOf                 :cellextradry_process_13_step_49_product_21 , :cellextradry_process_13_step_49_product_20 .
 
@@ -24734,10 +24767,6 @@ agrovoc:c_15569  a       owl:Class ;
 :isItineraryOf  a           owl:ObjectProperty ;
         rdfs:label          "is itinerary of"@en ;
         rdfs:subPropertyOf  obo:BFO_0000050 .
-
-:identiConTo_gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_
-        a                owl:ObjectProperty ;
-        obo:IAO_0000115  :gc_mixture_3.3_2.2_2.2_2.4_2.2_3.6_4.20_2.2_ .
 
 agrovoc:c_25467  a       owl:Class ;
         rdfs:label       "chestnuts"@en , "Châtaigne"@fr ;

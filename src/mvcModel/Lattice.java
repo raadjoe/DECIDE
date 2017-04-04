@@ -39,7 +39,6 @@ public class Lattice
 		{
 			this.allContexts.put(i, new ArrayList<Context>());
 		}
-		//this.allContexts.put(1, new ArrayList<Context>(Arrays.asList(mainContext)));
 		addToAllContexts(allContexts, 1, mainContext);
 		addToAllContexts(allContexts, latticeProperties.size() + 1, nullContext);
 		contextIDs[0] = 1;

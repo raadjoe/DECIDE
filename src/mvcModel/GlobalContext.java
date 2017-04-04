@@ -67,7 +67,7 @@ public class GlobalContext
 			System.out.print(i + ") ");
 			System.out.print(st.getSubject().getLocalName());
 			//System.out.print("  " + st.getPredicate() + "  ");
-			System.out.print("identiConTo<"+this.id+">");
+			System.out.print(" identiConTo<"+this.id+"> ");
 			System.out.println(st.getObject().asResource().getLocalName());
 			i++;
 		}
@@ -138,10 +138,6 @@ public class GlobalContext
 	
 	public void addDirectParentContext(GlobalContext parentContext)
 	{
-		if(parentContext.id.equals("GC_9"))
-		{
-			System.out.println("blabla");
-		}
 		if(this.searchIfParentContext(parentContext) == false)
 		{
 			this.directParentContexts.add(parentContext);
@@ -151,10 +147,6 @@ public class GlobalContext
 	
 	public void addParentContext(GlobalContext src, GlobalContext newGC)
 	{		
-		if(newGC.id.equals("GC_9"))
-		{
-			System.out.println("blabla");
-		}
 		if(checkIfSubGlobalContext(this, newGC) == true) 
 		{
 			if(this.directParentContexts.isEmpty())
@@ -226,25 +218,12 @@ public class GlobalContext
 		return parentContexts;
 	}
 	
-	/*public int getGlobalContextSize(int size)
-	{
-		ArrayList<GlobalContext> parentContexts = new ArrayList<>();
-		parentContexts = getAllParentContexts(parentContexts);		
-		size = size + this.statements.size();
-		for(GlobalContext parentGC : parentContexts)
-		{
-			size = size + parentGC.statements.size();
-		}
-		return size;
-	}*/
 	
 	public int getGlobalContextSize(int size)
 	{
-		//HashMap<Integer, Statement> st = new HashMap<>();
 		ArrayList<GlobalContext> parentContexts = new ArrayList<>();
 		ArrayList<String> pairs = new ArrayList<>();
 		parentContexts = getAllParentContexts(parentContexts);		
-		//size = size + this.statements.size();
 		pairs.addAll(this.pairNumbers);
 		for(GlobalContext parentGC : parentContexts)
 		{
@@ -255,9 +234,6 @@ public class GlobalContext
 					pairs.add(pair);
 				}
 			}
-			
-		 // st.putAll(parentGC.statementsPerCouple);
-			//size = size + parentGC.statements.size();
 		}	
 		return pairs.size();
 	}

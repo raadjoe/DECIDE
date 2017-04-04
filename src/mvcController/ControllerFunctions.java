@@ -20,22 +20,22 @@ public class ControllerFunctions
 
 	//================================== DECIDE ================================== 
 
-	public void decide(String modelURI, String identiConToClass, ArrayList<String> discardedClasses, HashMap<String,ArrayList<String>> discardedProperties, ArrayList<ArrayList<String>> indispensableProperties)
+	public void decide(String modelURI, String identiConToClass, ArrayList<String> discardedClasses, HashMap<String,ArrayList<String>> discardedProperties, ArrayList<ArrayList<String>> coupleProperties, ArrayList<ArrayList<String>> necessaryProperties)
 	{
 		loadModel(modelURI); //read the model
 		loadModelWithInference(modelURI); // read the model with inference
 		outputOntologyStats(); // output some ontology stats
-		constructDependantClassesAndLattices(identiConToClass, discardedClasses, discardedProperties, indispensableProperties);
+		constructDependantClassesAndLattices(identiConToClass, discardedClasses, discardedProperties, coupleProperties, necessaryProperties ); // construct all local contexts of the connex graph 
 		checkIdentiConToRelations(theModel.identiConToClass, theModel.dependentIdentiConToClasses);
-		writeOWLfile("data/Echantillon_PO2_CellExtraDry_Resultats.ttl");
+		writeOWLfile("data/Echantillon_PO2_CellExtraDry_Resultats.ttl"); // write the model with the generated identity links
 	}
 
 
-	public void constructDependantClassesAndLattices(String identiConToClass, ArrayList<String> discardedClasses, HashMap<String,ArrayList<String>> discardedProperties, ArrayList<ArrayList<String>> indispensableProperties)
+	public void constructDependantClassesAndLattices(String identiConToClass, ArrayList<String> discardedClasses, HashMap<String,ArrayList<String>> discardedProperties, ArrayList<ArrayList<String>> indispensableProperties, ArrayList<ArrayList<String>> necessaryProperties)
 	{
-		setDiscardedProperties(discardedProperties);
-		setIndispensableProperties(indispensableProperties);
 		setDiscardedClasses(discardedClasses);
+		setDiscardedProperties(discardedProperties);
+		setCoupleProperties(indispensableProperties);
 		createIdentiConToClassWithProperties(identiConToClass);
 		outputIdentiConToClassWithProperties(theModel.identiConToClass);
 		outputIdentiConToClassWithLatticeProperties(theModel.identiConToClass);
@@ -64,13 +64,11 @@ public class ControllerFunctions
 			}		
 	}
 
-
-
-	// set the indispensable properties in the Model
-	public void setIndispensableProperties(ArrayList<ArrayList<String>> indispensableProperties)
+	// set the couple properties in the Model
+	public void setCoupleProperties(ArrayList<ArrayList<String>> listOfCoupleProperties)
 	{
-		if(indispensableProperties!=null)
-			theModel.indispensableProperties.addAll(indispensableProperties); 
+		if(listOfCoupleProperties!=null)
+			theModel.setCoupleProperties(listOfCoupleProperties); 
 	}
 
 
@@ -130,6 +128,7 @@ public class ControllerFunctions
 
 	public void outputOntologyStats()
 	{
+		System.out.println("");
 		System.out.println("Number of statements: " + theModel.countStatements());
 		System.out.println("Number of classes: " + theModel.countClasses());
 		System.out.println("Number of individuals: " + theModel.countIndividuals());
@@ -137,6 +136,7 @@ public class ControllerFunctions
 		System.out.println("	Object properties: " + theModel.countObjectProperties());
 		System.out.println("	Data properties: " + theModel.countDataTypeProperties());
 		System.out.println("	Annotation properties: " + theModel.countAnnotationProperties());
+		System.out.println("");
 	}
 
 

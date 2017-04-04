@@ -14,15 +14,12 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.ontology.OntProperty;
 import org.apache.jena.ontology.OntResource;
-import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
-import org.apache.jena.query.ReadWrite;
 import org.apache.jena.query.ResultSet;
-import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
@@ -31,8 +28,6 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.tdb.TDBFactory;
-import org.apache.jena.tdb.TDBLoader;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.OWL;
@@ -56,7 +51,7 @@ public class ModelFunctions
 	public ArrayList<IdentiConToClass> dependentIdentiConToClasses;
 	public ArrayList<IdentiConToClass> nonConsideredIdentiConToClasses;
 	public HashMap<String, ArrayList<String>> discardedProperties;
-	public ArrayList<ArrayList<String>> indispensableProperties;
+	public ArrayList<ArrayList<Property>> coupleProperties;
 	public GlobalContext emptyGlobalContext;
 	public ArrayList<GlobalContext> allGlobalContexts;
 	public ArrayList<GlobalContext> temporaryGlobalContexts;
@@ -73,7 +68,7 @@ public class ModelFunctions
 		dependentIdentiConToClasses = new ArrayList<>();
 		nonConsideredIdentiConToClasses = new ArrayList<>();
 		discardedProperties = new HashMap<>();
-		indispensableProperties = new ArrayList<>();
+		coupleProperties = new ArrayList<>();
 		allGlobalContexts = new ArrayList<>();
 		temporaryGlobalContexts = new ArrayList<>();
 		createdContexts = new ArrayList<>();
@@ -129,47 +124,6 @@ public class ModelFunctions
 		catch (Exception ex) 
 		{
 			System.out.println("##### Error Fonction: writeOWLFile #####");
-			System.out.println(ex.getMessage());
-			return null;
-		}
-	}
-
-	/*public void readDataset(String directory)
-	{
-		try
-		{
-			Dataset dataset = TDBFactory.createDataset(directory);
-			dataset.begin(ReadWrite.WRITE) ; 
-			Model model = dataset.getDefaultModel();
-			//TDBLoader.loadModel(model, file);
-			dataset.commit();
-			dataset.end();
-		}
-		catch(Exception ex)
-		{
-			System.out.println("##### Error Fonction: readDataset #####");
-			System.out.println(ex.getMessage());
-		}		
-	}*/
-
-	// create a dataset
-	public Dataset createDataset()
-	{
-		try
-		{
-			String file = "C:\\Users\\Joe\\Desktop\\BLA\\PO2_CarredasDataTesting.ttl"; 
-			String directory = "C:\\Users\\Joe\\Desktop\\TRIPLE_STORE";
-			Dataset dataset = TDBFactory.createDataset(directory);
-			dataset.begin(ReadWrite.WRITE) ; 
-			Model model = dataset.getDefaultModel();
-			TDBLoader.loadModel(model, file);
-			dataset.commit();
-			dataset.end();
-			return dataset; 
-		}
-		catch(Exception ex)
-		{
-			System.out.println("##### Error Fonction: createDataset #####");
 			System.out.println(ex.getMessage());
 			return null;
 		}
@@ -677,25 +631,6 @@ public class ModelFunctions
 	}
 
 
-	public void identiConToMax(IdentiConToClass cbl, ArrayList<IdentiConToClass> Cdep, Resource res1, Resource res2)
-	{
-		GlobalContext globalContext = new GlobalContext();
-		temporaryGlobalContexts.add(globalContext);
-		counter++;
-		for (ListIterator<GlobalContext> file = temporaryGlobalContexts.listIterator(); file.hasNext();)
-		{
-			GlobalContext gC = file.next();
-			Pair visitedPairs = new Pair();
-			Lattice resourceLattice = getSpecificLatticeFromIndividual(res1);
-			globalContext = compareTwoResources(res1, res2, visitedPairs, null, resourceLattice, null, gC, file);			
-			globalContext.idClass = identiConToClass;
-			saveGlobalContext(globalContext, res1, res2);
-		}		
-		System.out.println("Pair " + counter + " number of global contexts --> " + temporaryGlobalContexts.size());
-		temporaryGlobalContexts.clear();
-	}
-
-
 	public void insertIdentiConToRelationships(IdentiConToClass cl, ArrayList<IdentiConToClass> dependantClasses)
 	{
 		counter = 0;
@@ -716,51 +651,27 @@ public class ModelFunctions
 		}	
 		outputAllGlobalContexts();
 		outputGlobalContextHierarchy();
-		outputEachGlobalContextSize();
-		outputNumberOfIdentityStatements();
-		System.out.println("##### Size : " + allGlobalContexts.size());
-		
+		outputEachGlobalContextSize();		
 	}
 
-	public void outputGlobalContextHierarchy()
+	public void identiConToMax(IdentiConToClass cbl, ArrayList<IdentiConToClass> Cdep, Resource res1, Resource res2)
 	{
-		emptyGlobalContext.outputAllParentontexts();
+		GlobalContext globalContext = new GlobalContext();
+		temporaryGlobalContexts.add(globalContext);
+		counter++;
+		for (ListIterator<GlobalContext> file = temporaryGlobalContexts.listIterator(); file.hasNext();)
+		{
+			GlobalContext gC = file.next();
+			Pair visitedPairs = new Pair();
+			Lattice resourceLattice = getSpecificLatticeFromIndividual(res1);
+			globalContext = compareTwoResources(res1, res2, visitedPairs, null, resourceLattice, null, gC, file);			
+			globalContext.idClass = identiConToClass;
+			saveGlobalContext(globalContext, res1, res2);
+		}		
+		System.out.println("Pair " + counter + " number of global contexts --> " + temporaryGlobalContexts.size());
+		temporaryGlobalContexts.clear();
 	}
 
-	public void outputEachGlobalContextSize()
-	{
-		for(GlobalContext gc : allGlobalContexts)
-		{
-			//System.out.println(gc.id + " proper size: " + gc.pairNumbers.size());
-			System.out.println(gc.id + " total size: " + gc.getGlobalContextSize(0));
-		}
-	}
-
-	public void outputNumberOfIdentityStatements()
-	{
-		int numberOfIdentityStatements = 0;
-		for(GlobalContext gc : allGlobalContexts)
-		{
-			numberOfIdentityStatements = numberOfIdentityStatements + gc.statements.size();
-		}
-		System.out.println("Total number of statements = " + numberOfIdentityStatements);
-	}
-
-	public void outputAllGlobalContexts()
-	{		
-		System.out.println(" ");
-		int numbOfSt = 0;
-		for(GlobalContext gc : allGlobalContexts)
-		{
-			System.out.println("###############");
-			gc.outputGlobalContext();
-			gc.outputStatements();		
-			numbOfSt = numbOfSt + gc.statements.size();
-		}
-		System.out.println(" ");
-		System.out.println("Total number of Global Contexts: " + allGlobalContexts.size());
-		System.out.println("Total number of IdentiConTo Statements: " + numbOfSt);	
-	}
 
 	public GlobalContext compareTwoResources(Resource res1, Resource res2, Pair visitedPairs, Property propSrc, Lattice currentLat, Lattice latSrc, GlobalContext globalContext, ListIterator<GlobalContext> file)
 	{	
@@ -768,7 +679,7 @@ public class ModelFunctions
 		if(highestCommonContext.checkIfLastContext() == false)
 		{
 			highestCommonContext = removeDifferentDataProperties(res1, res2, highestCommonContext);
-		}	
+		}
 		visitedPairs.addPair(res1, res2);
 		if(globalContext.allLocalContexts.containsKey(currentLat))
 		{
@@ -822,7 +733,7 @@ public class ModelFunctions
 		if(newListOfProps.size() != cnt.contextProperties.size())
 		{
 			Lattice lat = getSpecificLatticeFromIndividual(res1);
-			newContext = lat.searchContextByProperties(newListOfProps);
+			newContext = lat.searchContextByProperties(verifyPropertyConditions(newListOfProps));
 		}
 		return newContext;
 	}
@@ -850,6 +761,131 @@ public class ModelFunctions
 				}		
 			}
 		}
+	}
+
+	public Boolean haveSameStructure(HashMap<RDFNode, ArrayList<Resource>> hMap1, HashMap<RDFNode, ArrayList<Resource>> hMap2)
+	{	
+		if(hMap1.size() != hMap2.size())
+		{
+			return false;
+		}
+		else
+		{
+			for(RDFNode n1 : hMap1.keySet())
+			{
+				if(hMap2.containsKey(n1)==true)
+				{
+					if(hMap1.get(n1).size()!= hMap2.get(n1).size())
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	public void compareHashMapResources(HashMap<RDFNode, ArrayList<Resource>> hMap1, HashMap<RDFNode, ArrayList<Resource>> hMap2, Pair visitedPairs, Property propSrc, Lattice currentLat, Lattice latSrc, GlobalContext globalContext, ListIterator<GlobalContext> file)
+	{
+		if(!hMap1.isEmpty() && !hMap2.isEmpty())
+		{
+			for(RDFNode n1 : hMap1.keySet())
+			{
+				ArrayList<Resource> list1 = hMap1.get(n1);
+				ArrayList<Resource> list2 = hMap2.get(n1);
+				if(list1.size() >1)
+				{
+					list2 = bestPairs(list1, list2);
+				}				
+				for(int i = 0 ; i < list1.size() ; i++)
+				{
+					Resource res1 = list1.get(i);
+					Resource res2 = list2.get(i);
+					Lattice thisLat = getSpecificLatticeFromIndividual(res1);
+					if(visitedPairs.checkIfPairExists(res1, res2)== false)
+					{
+						compareTwoResources(res1, res2, visitedPairs, propSrc, thisLat, currentLat, globalContext, file);
+					}	
+				}
+			}
+		}	
+	}
+
+
+	public ArrayList<Resource> bestPairs(ArrayList<Resource> list1, ArrayList<Resource> list2)
+	{
+		int i = 0;
+		ArrayList<Resource> lockedResources = new ArrayList<>();
+		ArrayList<Resource> list3 = new ArrayList<>();
+		for(Resource res1 : list1)
+		{	
+			Context previousContext = null;
+			for(Resource res2 : list2)
+			{
+				if(!lockedResources.contains(res2))
+				{
+					Context highestCommonContext = findHighestCommonContext(res1, res2);
+					if(highestCommonContext.checkIfLastContext() == false)
+					{
+						highestCommonContext = removeDifferentDataProperties(res1, res2, highestCommonContext);
+					}
+
+					if(previousContext == null)
+					{
+						previousContext = highestCommonContext;
+						list3.add(i, res2);
+					}
+					else
+					{
+						if(highestCommonContext.contextLevel < previousContext.contextLevel)
+						{
+							if(highestCommonContext.contextNumber < previousContext.contextLevel)
+							{
+								list3.remove(i);
+								list3.add(i, res2);
+								previousContext = highestCommonContext;
+							}
+						}
+					}
+				}
+			}
+			lockedResources.add(i, list3.get(i));
+			i++;
+		}
+		return list3;
+	}
+
+	public void outputGlobalContextHierarchy()
+	{
+		emptyGlobalContext.outputAllParentontexts();
+	}
+
+	public void outputEachGlobalContextSize()
+	{
+		for(GlobalContext gc : allGlobalContexts)
+		{
+			System.out.println(gc.id + " total size: " + gc.getGlobalContextSize(0));
+		}
+	}
+
+	public void outputAllGlobalContexts()
+	{		
+		System.out.println(" ");
+		int numbOfSt = 0;
+		for(GlobalContext gc : allGlobalContexts)
+		{
+			System.out.println("###############");
+			gc.outputGlobalContext();
+		//	gc.outputStatements();		
+			numbOfSt = numbOfSt + gc.statements.size();
+		}
+		System.out.println(" ");
+		System.out.println("Total number of Global Contexts: " + allGlobalContexts.size());
+		System.out.println("Total number of IdentiConTo Statements: " + numbOfSt);	
 	}
 
 
@@ -921,171 +957,6 @@ public class ModelFunctions
 		return hMap;
 	}
 
-	public void compareHashMapResources(HashMap<RDFNode, ArrayList<Resource>> hMap1, HashMap<RDFNode, ArrayList<Resource>> hMap2, Pair visitedPairs, Property propSrc, Lattice currentLat, Lattice latSrc, GlobalContext globalContext, ListIterator<GlobalContext> file)
-	{
-		if(!hMap1.isEmpty() && !hMap2.isEmpty())
-		{
-			for(RDFNode n1 : hMap1.keySet())
-			{
-				ArrayList<Resource> list1 = hMap1.get(n1);
-				ArrayList<Resource> list2 = hMap2.get(n1);
-				for(int i = 0 ; i < list1.size() ; i++)
-				{
-					Resource res1 = list1.get(i);
-					Resource res2 = list2.get(i);
-					Lattice thisLat = getSpecificLatticeFromIndividual(res1);
-					if(visitedPairs.checkIfPairExists(res1, res2)== false)
-					{
-						compareTwoResources(res1, res2, visitedPairs, propSrc, thisLat, currentLat, globalContext, file);
-					}	
-				}
-
-
-				/*for(Resource res1: hMap1.get(n1))
-				{
-					for(Resource res2: hMap2.get(n1))
-					{
-						Lattice thisLat = getSpecificLatticeFromIndividual(res1);
-						if(visitedPairs.checkIfPairExists(res1, res2)== false)
-						{
-							compareTwoResources(res1, res2, visitedPairs, propSrc, thisLat, currentLat, globalContext, file);
-						}	
-					}
-				}*/
-			}
-		}	
-	}
-
-
-	public void mostLikelySimilar(ArrayList<Resource> list1, ArrayList<Resource> list2)
-	{
-
-	}
-
-
-	/*public HashMap<RDFNode, ArrayList<Resource>> getObjectPropertyValues(Resource res, Property objProperty)
-	{
-		HashMap<RDFNode, ArrayList<Resource>> hMap = new HashMap<>();
-		for (StmtIterator statement = res.listProperties(objProperty); statement.hasNext();) 
-		{					
-			Statement thisStatement = statement.next();	
-			Resource thisObject = thisStatement.getObject().asResource();
-			RDFNode n = getDirectType(thisObject.getURI());
-
-			if(hMap.containsKey(n))
-			{
-				hMap.get(n).add(thisObject);
-			}
-			else
-			{
-				ArrayList<Resource> arrayResources = new ArrayList<>();
-				arrayResources.add(thisObject);
-				hMap.put(n,arrayResources);
-			}
-
-		}
-		return hMap;
-	}*/
-
-	public Boolean haveSameStructure(HashMap<RDFNode, ArrayList<Resource>> hMap1, HashMap<RDFNode, ArrayList<Resource>> hMap2)
-	{	
-		if(hMap1.size() != hMap2.size())
-		{
-			return false;
-		}
-		else
-		{
-			for(RDFNode n1 : hMap1.keySet())
-			{
-				if(hMap2.containsKey(n1)==true)
-				{
-					if(hMap1.get(n1).size()!= hMap2.get(n1).size())
-					{
-						return false;
-					}
-				}
-				else
-				{
-					return false;
-				}
-			}
-		}
-		return true;
-	}
-
-
-	/*public void compareHashMapResources(HashMap<RDFNode, ArrayList<Resource>> hMap1, HashMap<RDFNode, ArrayList<Resource>> hMap2, Pair visitedPairs, Property propSrc, Lattice currentLat, Lattice latSrc, GlobalContext globalContext, ListIterator<GlobalContext> file)
-	{
-		if(!hMap1.isEmpty() && !hMap2.isEmpty())
-		{
-			for(RDFNode n1 : hMap1.keySet())
-			{
-				ArrayList<Resource> list1 = hMap1.get(n1);
-				ArrayList<Resource> list2 = hMap2.get(n1);
-				if(list1 == null)
-				{
-					//Lattice thisLat = getSpecificLatticeFromIndividual(list2.get(0));
-					removePropertyFromGlobalContext(globalContext, latSrc, propSrc);
-					//Context lastContext = thisLat.getLastContext();
-					//globalContext.allLocalContexts.replace(thisLat,globalContext.allLocalContexts.get(thisLat), lastContext);
-					//globalContext.allLocalContexts.put(thisLat, lastContext);
-				}
-				else
-				{
-					if(list2 == null)
-					{
-						//Lattice thisLat = getSpecificLatticeFromIndividual(list1.get(0));
-						removePropertyFromGlobalContext(globalContext, latSrc, propSrc);
-						//Context lastContext = thisLat.getLastContext();
-						//globalContext.allLocalContexts.replace(thisLat,globalContext.allLocalContexts.get(thisLat), lastContext);
-						//globalContext.allLocalContexts.put(thisLat, lastContext);
-					}
-					else
-					{
-						if(list1.size() != list2.size())
-						{
-							//Lattice thisLat = getSpecificLatticeFromIndividual(list1.get(0));
-							removePropertyFromGlobalContext(globalContext, latSrc, propSrc);
-							//Context lastContext = thisLat.getLastContext();
-							//globalContext.allLocalContexts.replace(thisLat,globalContext.allLocalContexts.get(thisLat), lastContext);
-							//globalContext.allLocalContexts.put(thisLat, lastContext);
-						}
-						else
-						{
-							Lattice thisLat = getSpecificLatticeFromIndividual(list1.get(0));
-							for(int i =0 ; i <list1.size(); i++)
-							{	
-								Resource res1 = list1.get(i);
-								Resource res2 = list2.get(i);
-								if(!visitedPairs.checkIfPairExists(res1, res2))
-								{
-									compareTwoResources(res1, res2, visitedPairs, propSrc, thisLat, currentLat, globalContext, file);
-								}					
-							}
-						}
-					}
-				}			
-			}
-		}
-
-
-
-
-
-		for(Resource res1: hMap1.get(n1))
-				{
-					for(Resource res2: hMap2.get(n1))
-					{
-						Lattice thisLat = getSpecificLatticeFromIndividual(res1);
-						if(visitedPairs.checkIfPairExists(res1, res2)== false)
-						{
-							compareTwoResources(res1, res2, visitedPairs, propSrc, thisLat, currentLat, globalContext, file);
-						}	
-					}
-				}
-
-	}
-	 */
 	public void removePropertyFromGlobalContext(GlobalContext globalContext, Lattice latSrc, Property unwantedProperty)
 	{	
 		Context oldContext = globalContext.allLocalContexts.get(latSrc);
@@ -1093,8 +964,8 @@ public class ModelFunctions
 		{
 			ArrayList<Property> properties = new ArrayList<>();
 			properties.addAll(oldContext.getContextProperties());
-			properties.remove(unwantedProperty);
-			Context newContext = latSrc.searchContextByProperties(properties);
+			properties.remove(unwantedProperty);		
+			Context newContext = latSrc.searchContextByProperties(verifyPropertyConditions(properties));
 			globalContext.allLocalContexts.replace(latSrc, oldContext, newContext);	
 		}
 
@@ -1148,33 +1019,42 @@ public class ModelFunctions
 					}
 				}
 			}
-		}
+		}		
+		commonProperties = verifyPropertyConditions(commonProperties);
 		highestCommonContext = lat.searchContextByProperties(commonProperties);
 		return highestCommonContext;
 	}
+
+	public ArrayList<Property> verifyPropertyConditions(ArrayList<Property> commonProperties)
+	{
+		for(ArrayList<Property> list1 : coupleProperties)
+		{
+			int i = 0;
+			for(Property prop : list1)
+			{
+				if(commonProperties.contains(prop))
+				{
+					i++;
+				}
+			}
+			if(i>0 && i!= list1.size())
+			{
+				for(Property prop : list1)
+				{
+					commonProperties.remove(prop);
+				}
+			}
+		}	
+		return commonProperties;
+	}
+
+
 
 	// get the class' lattice of a certain individual
 	public Lattice getSpecificLatticeFromIndividual(Resource individual)
 	{
 		IdentiConToClass indType = getIndividualType(individual.getURI());
 		return indType.localLattice;
-		/*Lattice lat = null;
-		if(identiConToClass.idClass.getURI().equals(indType.asResource().getURI()))
-		{
-			lat = identiConToClass.localLattice;
-		}
-		else
-		{
-			for(IdentiConToClass depClasses : dependentIdentiConToClasses)
-			{
-				if(depClasses.idClass.getURI().equals(indType.asResource().getURI()))
-				{
-					lat = depClasses.localLattice;
-					break;
-				}
-			}
-		}
-		return lat;*/
 	}
 
 
@@ -1228,14 +1108,30 @@ public class ModelFunctions
 		}
 		qe.close();		
 		//punning class
-
-
-
-
-
 		return null;
 	}
 
+
+	public void setCoupleProperties(ArrayList<ArrayList<String>> listOfProperties)
+	{
+		ArrayList<ArrayList<Property>> listOfRealProperties = new ArrayList<>();
+		int i = 0;
+		for(ArrayList<String> list1 : listOfProperties)
+		{
+			ArrayList<Property> aCouple = new ArrayList<>();
+			for(String p : list1)
+			{
+				Property prop = model.getProperty(p);
+				if(prop!=null)
+				{
+					aCouple.add(prop);
+				}
+			}	
+			listOfRealProperties.add(i, aCouple);
+			i++;
+		}
+		coupleProperties.addAll(listOfRealProperties);
+	}
 
 	public void addGlobalContextToQueue(Lattice lat, Context cnt, ListIterator<GlobalContext> file)
 	{
@@ -1371,8 +1267,10 @@ public class ModelFunctions
 				size ++;
 			}			
 		}
+		System.out.println("");
 		System.out.println("Number of Classes in the connex graph: " + dependentIdentiConToClasses.size());
 		System.out.println("Number of Individuals in the connex graph: " + size);
+		System.out.println("");
 	}
 
 
